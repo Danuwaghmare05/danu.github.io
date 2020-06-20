@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="js/jquery.js"></script>
+
+    <style>
+      #head {
+        width: 150px;
+        height: 35px;
+        background-color: silver;
+        cursor: pointer;
+      }
+
+      #cont {
+        width: 150px;
+        height: 150px;
+        background-color: silver;
+        display: none;
+        z-index: 1000;
+        position: absolute;
+      }
+    </style>
+    <div id="head" onclick="fun1()">
+      <img src="../img/close.png" width="20px" id="img1" />
+    </div>
+    <div id="cont">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, sint
+      temporibus. Obcaecati error dolore iusto quia? Omnis maxime rerum
+      voluptates aperiam esse consequuntur ullam libero alias officiis ut, saepe
+      dolores!
+    </div>
+
+    <script>
+      function fun1() {
+        if (document.getElementById("img1").src == "../img/close.png") {
+          $("#cont").slideDown("slow");
+          document.getElementById("img1").src = "../img/close.png";
+        } else {
+          $("#cont").slideUp("slow");
+          document.getElementById("img1").src = "../img/close.png";
+        }
+      }
+    </script>
+  </body>
+</html>
